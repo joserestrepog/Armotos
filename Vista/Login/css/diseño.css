@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../img/taller.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.login_caja {
+    width: 320px;
+    height: 420px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 30px;
+}
+
+.login_caja .foto_logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 55px);
+}
+
+.login_caja h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.login_caja label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    font-size: 20px;
+    
+}
+
+.login_caja input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login_caja input[type="text"],
+.login_caja input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.login_caja input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #6c757d;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.login_caja a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: grey;
+}
+
+.login_caja a:hover {
+    color: #4DD0E1;
+}

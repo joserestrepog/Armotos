@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/diseño.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>     
+                                        
+    <div class="login_caja">
+        <img class="foto_logo" src="img/Logo-1.png" alt="Logo de Armotos">
+        <h1>Bienvenido</h1>
+        <form action="/SuperMarket/Controlador/ControllerInicio.php" name="incio" method="post">
+            
+            <!-- Usuario-->
+            <label for="usuario">Usuario</label>
+            <input type="text" name="id_usuario" required title="Digite un usuario" placeholder="Introduzca su usuario">
+
+
+            <!-- Contraseña-->
+            <label for="contraseña">Contraseña</label>
+            <input type="password" name="contrasena" required title="Digite la contraseña" placeholder="Introduzca su contraseña">
+
+            <input type="submit" value="Ingresar">              
+        </form>        
+    </div>
+    <script>
+        function datosIncorrectos(){
+            swal({
+                title: 'Datos incorrectos.',
+                icon: 'sucess'
+            });
+        }
+    </script>
+</body>
+</html>
+ 
