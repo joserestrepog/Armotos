@@ -1,18 +1,15 @@
 <?php
         #Capturar datos del formulario Iniciar Sesión.
-        $usuario=$_POST['id_usuario']; 
+        $usuario=$_POST['usuario']; 
         $contrasena=$_POST['contrasena']; 
         include '../Modelo/Servicios.php';
         
         $result=iniciarSesion($usuario, $contrasena);
 
-        if($result=="Administrador"){
+        if($result=="true"){
             header ("refresh:0;url=../Vista/Modulo_administrador/html/ModuloAdministrador.html");
         }
-        else if($result=="Colaborador"){
-            header ("refresh:0;url=../Vista/Modulo_colaborador/ModuloInventarioBuscasC.php");
-        }
-        else if($result=="NOROL"){
+        else if($result=="false"){
             echo <<<JAVASCRIPT
             <script type="text/javascript">
                 alert("Datos incorrectos.");
