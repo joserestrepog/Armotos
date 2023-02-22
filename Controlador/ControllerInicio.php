@@ -7,7 +7,7 @@
         $result=iniciarSesion($usuario, $contrasena);
 
         if($result=="true"){
-            header ("refresh:0;url=../Vista/Modulo_administrador/html/ModuloAdministrador.html");
+            header ("refresh:0;url=../Vista/Modulo_administrador/html/ModuloGestion.html");
         }
         else if($result=="false"){
             echo <<<JAVASCRIPT

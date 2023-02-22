@@ -4,8 +4,8 @@
             include 'conexion.php';
             $res="";
             $query = "SELECT usuario, contrasena FROM usuario WHERE usuario='$usuario' AND contrasena='$contrasena'";
-            $sql = mysql_query($conn,$query);
-            $filas = mysqli_num_rows($sql)
+            $sql = mysqli_query($conn,$query);
+            $filas = mysqli_num_rows($sql);
             
             if($filas){
                 $res="true";
