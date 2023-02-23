@@ -1,27 +1,28 @@
 <?php
-     $codigo=$_POST['codigo']; 
+     $placa=$_POST['placa'];
+     $nombre=$_POST['nombre'];     
+     $fechaing=$_POST['fechaing'];  
+     $fechasal=$_POST['fechasal'];  
+     $usuario=$_POST['usuario'];
      $descripcion=$_POST['descripcion']; 
-     $precio=$_POST['precio']; 
-     $cantidad=$_POST['cantidad']; 
-     $fecha_ingreso=$_POST['fechaIngreso']; 
-     $fecha_vencimiento=$_POST['fechaVencimiento']; 
+     $precio=$_POST['precio'];
      include '../../Modelo/Servicios.php';
      
-     $result=insertarProducto($codigo, $descripcion, $precio, $cantidad, $fecha_ingreso, $fecha_vencimiento);
-     if($result=="OK"){
+     $result=insertarServicio($placa, $nombre, $fechaing, $fechasal, $usuario, $descripcion, $precio);
+     if($result=="true"){
         echo <<<JAVASCRIPT
             <script type="text/javascript">
-                alert("Se insertó el producto.");
+                alert("Se ingresó el servicio.");
             </script>
             JAVASCRIPT;
-            header ("refresh:0;url=../../Vista/Modulo_administrador/html/Inventario/ModuloInventarioInsertar.html");  
+            header ("refresh:0;url=../../Vista/Modulo_administrador/html/ModuloGestionInsertar.html");  
      }
-     else if($result=="ERROR"){
+     else if($result=="false"){
         echo <<<JAVASCRIPT
         <script type="text/javascript">
-            alert("Error al insertar el producto.");
+            alert("Error al ingresar el servicio.");
         </script>
         JAVASCRIPT;
-        header ("refresh:0;url=../../Vista/Modulo_administrador/html/Inventario/ModuloInventarioInsertar.html"); 
+        header ("refresh:0;url=../../Vista/Modulo_administrador/html/ModuloGestionInsertar.html"); 
      }
 ?>
